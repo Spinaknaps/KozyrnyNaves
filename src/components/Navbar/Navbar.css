@@ -1,0 +1,18 @@
+.navbar {
+    margin-top: 70px;
+    
+    background: #2d2e38;
+}
+
+.nav-content {
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.nav-content a {
+    color: white;
+    font-size: 14px;
+}

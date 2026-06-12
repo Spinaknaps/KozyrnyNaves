@@ -1,0 +1,112 @@
+.works {
+    height: 500px;
+    background: #341f28;
+    padding-top: 35px;
+    overflow: hidden;
+}
+
+.works h2 {
+    text-align: center;
+    color: white;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 45px;
+}
+
+/* зона слайдера */
+
+.works-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* трек */
+
+.slider-window {
+    width: 100%;
+    overflow: hidden;
+}
+
+.works-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+
+    animation: scrollWorks 30s linear infinite;
+}
+
+.works-track:hover {
+    animation-play-state: paused;
+}
+
+.work-card {
+    width: 384px;
+    height: 256px;
+    flex-shrink: 0;
+}
+
+.work-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* круглые кнопки */
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #4a3340;
+    color: white;
+
+    cursor: pointer;
+    z-index: 5;
+
+    font-size: 22px;
+}
+
+.left {
+    left: -20px;
+}
+
+.right {
+    right: -20px;
+}
+
+/* нижний индикатор */
+
+.slider-progress {
+    width: 260px;
+    height: 24px;
+
+    background: #dcc6c9;
+    border-radius: 30px;
+
+    margin: 55px auto 0;
+    overflow: hidden;
+}
+
+.slider-progress-fill {
+    width: 35%;
+    height: 100%;
+    background: rgba(255,255,255,.3);
+}
+
+@keyframes scrollWorks {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50%));
+    }
+}
