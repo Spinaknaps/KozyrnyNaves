@@ -1,73 +1,70 @@
 import "./Footer.css";
 
-
-
-function Footer() {
+export default function Footer() {
     return (
         <footer className="footer">
             <div className="container">
+
                 <div className="footer-content">
 
-                    <div className="footer-column">
+                    <div className="footer-left">
                         <div className="footer-logo">
-                           
-
-                            <div className="footer-logo-text">
-                                <h2>Козырный<br />Навес</h2>
-                            </div>
+                            <img src="assets/logo/logotype.svg" alt="Козырный Навес" />
                         </div>
 
                         <p className="footer-description">
-                            Производство и монтаж навесов в
-                            <br />
-                            Ижевске и пригороде
+                            Производство и монтаж навесов в Ижевске и пригороде
                         </p>
                     </div>
 
-                    <div className="footer-column footer-center">
-                        <a
-                            href="tel:+78789405804860"
-                            className="footer-contact"
-                        >
-                            87879405804860
+                    <div className="footer-center">
+                        <a href="tel:+7879405804860">
+                            7879405804860
                         </a>
 
-                        <a
-                            href="mailto:ghsdkjghs@mail.ru"
-                            className="footer-contact"
-                        >
+                        <a href="mailto:ghsdkjghs@mail.ru">
                             ghsdkjghs@mail.ru
                         </a>
                     </div>
 
-                    <div className="footer-column footer-right">
+                    <div className="footer-right">
                         <h3>Мы в соцсетях</h3>
 
                         <div className="footer-socials">
+
                             <a href="#">
-                                <img src="assets/icons/vkv.svg" alt="VK" />
+                                <img
+                                    src="assets/icons/vkv.svg"
+                                    alt="VK"
+                                />
                             </a>
 
                             <a href="#">
-                                <img src="assets/icons/max.svg" alt="VK" />
+                                <img
+                                    src="assets/icons/tg.svg"
+                                    alt="Telegram"
+                                />
                             </a>
 
                             <a href="#">
-                               <img src="assets/icons/tg.svg" alt="VK" />
+                                <img
+                                    src="assets/icons/max.svg"
+                                    alt="Telegram"
+                                />
                             </a>
+
                         </div>
                     </div>
 
                 </div>
 
-                <div className="footer-line"></div>
+                <div className="footer-divider"></div>
 
                 <div className="footer-bottom">
                     © 2026 Козырный Навес. Все права защищены.
                 </div>
+
             </div>
         </footer>
     );
 }
-
-export default Footer;

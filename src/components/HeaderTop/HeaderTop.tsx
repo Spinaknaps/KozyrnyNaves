@@ -6,7 +6,7 @@ function HeaderTop() {
       <div className="container header-content">
 
         <div className="logo">
-          <img src="/logo.png" alt="logo" />
+          <img src="assets/logo/logotype.svg" alt="logo" />
         </div>
 
         <div className="header-email">
