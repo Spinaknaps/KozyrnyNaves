@@ -34,12 +34,7 @@ function Works() {
 
         <div className="works-slider">
 
-          <button
-            className="slider-btn left"
-            onClick={prevSlide}
-          >
-            ←
-          </button>
+          
 
           <div className="slider-window">
             <div className="works-track">
@@ -51,12 +46,6 @@ function Works() {
             </div>
           </div>
 
-          <button
-            className="slider-btn right"
-            onClick={nextSlide}
-          >
-            →
-          </button>
 
         </div>
 

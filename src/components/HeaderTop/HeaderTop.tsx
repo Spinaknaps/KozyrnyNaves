@@ -15,15 +15,15 @@ function HeaderTop() {
 
         <div className="header-socials">
 
-          <a href="#">
+          <a href="https://vk.com/navesiartem">
             <img src="assets/icons/vkv.svg" alt="VK" />
           </a>
 
-          <a href="#">
+          <a href="https://max.ru/u/f9LHodD0cOK2_Pz73E3Bcn2SjnHsBUE-visFwuH4xgxAtp_ud3QcE_zwEtM">
             <img src="assets/icons/max.svg" alt="VK" />
           </a>
 
-          <a href="#">
+          <a href="https://t.me/spinaknaps">
             <img src="assets/icons/tg.svg" alt="VK" />
           </a>
 

@@ -10,7 +10,7 @@ function ContactsSection() {
 
         <div className="contacts-info">
 
-          <p>+7 (912) 123-12-34</p>
+          <p>+7 (912) 025-42-62</p>
 
           <p>pochta@mail.ru</p>
 

@@ -19,11 +19,11 @@ export default function Footer() {
 
                     <div className="footer-center">
                         <a href="tel:+7879405804860">
-                            7879405804860
+                            +7(912)025-42-62
                         </a>
 
                         <a href="mailto:ghsdkjghs@mail.ru">
-                            ghsdkjghs@mail.ru
+                            artem.pochta@mail.ru
                         </a>
                     </div>
 
@@ -32,21 +32,21 @@ export default function Footer() {
 
                         <div className="footer-socials">
 
-                            <a href="#">
+                            <a href="https://vk.com/navesiartem">
                                 <img
                                     src="assets/icons/vkv.svg"
                                     alt="VK"
                                 />
                             </a>
 
-                            <a href="#">
+                            <a href="https://t.me/spinaknaps">
                                 <img
                                     src="assets/icons/tg.svg"
                                     alt="Telegram"
                                 />
                             </a>
 
-                            <a href="#">
+                            <a href="https://max.ru/u/f9LHodD0cOK2_Pz73E3Bcn2SjnHsBUE-visFwuH4xgxAtp_ud3QcE_zwEtM">
                                 <img
                                     src="assets/icons/max.svg"
                                     alt="Telegram"
