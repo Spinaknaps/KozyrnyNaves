@@ -1,9 +1,12 @@
+/* ===================================================== */
+/* ===== БАЗОВЫЕ СТИЛИ (уже есть) ===== */
+/* ===================================================== */
+
 .footer {
     height: 300px;
     background: #1F252B;
     color: #FFFFFF;
     font-family: "Manrope", sans-serif;
-
     display: flex;
     align-items: center;
 }
@@ -19,6 +22,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     align-items: start;
     padding-bottom: 30px;
+    gap: 30px; /* Добавил отступы между колонками */
 }
 
 .footer-column {
@@ -37,7 +41,7 @@
 }
 
 .footer-logo img {
-    width: 280px; /* подбери по размеру своего SVG */
+    width: 280px;
     height: auto;
     display: block;
 }
@@ -109,4 +113,467 @@
 .footer-bottom {
     text-align: center;
     font-size: 16px;
+}
+
+/* ===================================================== */
+/* ===== АДАПТИВ ===== */
+/* ===================================================== */
+
+/* ===== НОУТБУКИ И МАЛЕНЬКИЕ ДЕСКТОПЫ (1024px - 1365px) ===== */
+@media screen and (max-width: 1365px) {
+    .container {
+        width: 92%;
+        max-width: 1400px;
+    }
+
+    .footer-content {
+        gap: 25px;
+    }
+
+    .footer-logo img {
+        width: 240px;
+    }
+
+    .footer-logo span {
+        font-size: 32px;
+    }
+
+    .footer-description {
+        font-size: 18px;
+        max-width: 380px;
+    }
+
+    .footer-center a {
+        font-size: 26px;
+    }
+
+    .footer-right h3 {
+        font-size: 26px;
+    }
+}
+
+/* ===== ПЛАНШЕТЫ (768px - 1023px) ===== */
+@media screen and (max-width: 1023px) {
+    .footer {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding-bottom: 25px;
+    }
+
+    .footer-column {
+        font-size: 28px;
+    }
+
+    .footer-left {
+        gap: 25px;
+    }
+
+    .footer-logo img {
+        width: 200px;
+    }
+
+    .footer-logo span {
+        font-size: 28px;
+    }
+
+    .footer-description {
+        font-size: 17px;
+        max-width: 100%;
+    }
+
+    .footer-center {
+        gap: 40px;
+        margin-top: 0;
+        align-items: flex-start;
+    }
+
+    .footer-center a {
+        font-size: 24px;
+    }
+
+    .footer-right {
+        gap: 40px;
+        margin-top: 0;
+        align-items: flex-start;
+    }
+
+    .footer-right h3 {
+        font-size: 24px;
+    }
+
+    .footer-socials img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .footer-divider {
+        margin-bottom: 12px;
+    }
+
+    .footer-bottom {
+        font-size: 15px;
+    }
+}
+
+/* ===== ТЕЛЕФОНЫ (481px - 767px) ===== */
+@media screen and (max-width: 767px) {
+    .footer {
+        padding: 30px 0;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .footer-column {
+        font-size: 24px;
+    }
+
+    /* Левая колонка */
+    .footer-left {
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-logo {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-logo img {
+        width: 180px;
+    }
+
+    .footer-logo span {
+        font-size: 24px;
+    }
+
+    .footer-description {
+        font-size: 16px;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* Центральная колонка */
+    .footer-center {
+        gap: 25px;
+        margin-top: 0;
+        align-items: center;
+    }
+
+    .footer-center a {
+        font-size: 22px;
+        padding: 5px 0;
+    }
+
+    /* Правая колонка */
+    .footer-right {
+        gap: 25px;
+        margin-top: 0;
+        align-items: center;
+    }
+
+    .footer-right h3 {
+        font-size: 22px;
+    }
+
+    .footer-socials {
+        gap: 25px;
+    }
+
+    .footer-socials img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .footer-divider {
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+        font-size: 14px;
+    }
+}
+
+/* ===== МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 480px) ===== */
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 25px 0;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .footer-content {
+        gap: 25px;
+        padding-bottom: 15px;
+    }
+
+    .footer-column {
+        font-size: 20px;
+    }
+
+    .footer-left {
+        gap: 15px;
+    }
+
+    .footer-logo img {
+        width: 150px;
+    }
+
+    .footer-logo span {
+        font-size: 20px;
+    }
+
+    .footer-description {
+        font-size: 14px;
+    }
+
+    .footer-center {
+        gap: 20px;
+    }
+
+    .footer-center a {
+        font-size: 18px;
+    }
+
+    .footer-right {
+        gap: 20px;
+    }
+
+    .footer-right h3 {
+        font-size: 18px;
+    }
+
+    .footer-socials {
+        gap: 18px;
+    }
+
+    .footer-socials img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .footer-divider {
+        height: 1px;
+        margin-bottom: 8px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+}
+
+/* ===== ОЧЕНЬ МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 360px) ===== */
+@media screen and (max-width: 360px) {
+    .footer {
+        padding: 20px 0;
+    }
+
+    .footer-logo img {
+        width: 120px;
+    }
+
+    .footer-logo span {
+        font-size: 18px;
+    }
+
+    .footer-description {
+        font-size: 13px;
+    }
+
+    .footer-center a {
+        font-size: 16px;
+    }
+
+    .footer-right h3 {
+        font-size: 16px;
+    }
+
+    .footer-socials img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .footer-bottom {
+        font-size: 11px;
+    }
+}
+
+/* ===== БОЛЬШИЕ ЭКРАНЫ (1920px+) ===== */
+@media screen and (min-width: 1920px) {
+    .container {
+        max-width: 1800px;
+        width: 85%;
+    }
+
+    .footer {
+        height: 350px;
+    }
+
+    .footer-content {
+        gap: 50px;
+        padding-bottom: 40px;
+    }
+
+    .footer-logo img {
+        width: 320px;
+    }
+
+    .footer-logo span {
+        font-size: 40px;
+    }
+
+    .footer-description {
+        font-size: 22px;
+        max-width: 500px;
+    }
+
+    .footer-center a {
+        font-size: 34px;
+    }
+
+    .footer-right h3 {
+        font-size: 34px;
+    }
+
+    .footer-socials img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .footer-bottom {
+        font-size: 18px;
+    }
+}
+
+/* ===== СВЕРХШИРОКИЕ ЭКРАНЫ (2560px+) ===== */
+@media screen and (min-width: 2560px) {
+    .container {
+        max-width: 2200px;
+        width: 80%;
+    }
+
+    .footer {
+        height: 400px;
+    }
+
+    .footer-content {
+        gap: 70px;
+        padding-bottom: 50px;
+    }
+
+    .footer-logo img {
+        width: 380px;
+    }
+
+    .footer-logo span {
+        font-size: 44px;
+    }
+
+    .footer-description {
+        font-size: 24px;
+        max-width: 600px;
+    }
+
+    .footer-center a {
+        font-size: 38px;
+    }
+
+    .footer-right h3 {
+        font-size: 38px;
+    }
+
+    .footer-socials img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .footer-bottom {
+        font-size: 20px;
+    }
+}
+
+/* ===== ДЛЯ ПЕЧАТИ ===== */
+@media print {
+    .footer {
+        height: auto;
+        background: white;
+        color: black;
+        padding: 20px 0;
+    }
+
+    .footer-divider {
+        background: #000;
+    }
+
+    .footer-socials img {
+        filter: grayscale(1);
+    }
+}
+
+/* ===== ТЁМНАЯ ТЕМА (если включена в системе) ===== */
+@media (prefers-color-scheme: dark) {
+    .footer {
+        background: #161a1f;
+    }
+
+    .footer-divider {
+        background: #3a4047;
+    }
+}
+
+/* ===== ДЛЯ СЕНСОРНЫХ УСТРОЙСТВ ===== */
+@media (hover: none) {
+    .footer-center a:active {
+        opacity: 0.7;
+    }
+    
+    .footer-socials a:active {
+        opacity: 0.7;
+    }
+}
+
+/* ===== УЛУЧШЕНИЯ ДЛЯ ДОСТУПНОСТИ ===== */
+
+/* Для пользователей с увеличенным шрифтом в системе */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Для пользователей с высоким контрастом */
+@media (prefers-contrast: high) {
+    .footer {
+        background: #000;
+    }
+
+    .footer-divider {
+        background: #fff;
+        height: 3px;
+    }
+
+    .footer-center a {
+        text-decoration: underline;
+    }
 }

@@ -1,12 +1,14 @@
+/* ===================================================== */
+/* ===== БАЗОВЫЕ СТИЛИ (уже есть) ===== */
+/* ===================================================== */
+
 .navbar {
     margin-top: 70px;
-    
     background: #2d2e38;
 }
 
 .nav-content {
     height: 42px;
-
     display: flex;
     align-items: center;
     gap: 45px;
@@ -15,4 +17,241 @@
 .nav-content a {
     color: white;
     font-size: 14px;
+    text-decoration: none;
+    transition: 0.2s;
+    white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+.nav-content a:hover {
+    color: #57ff1d;
+}
+
+/* ===================================================== */
+/* ===== АДАПТИВ ===== */
+/* ===================================================== */
+
+/* ===== НОУТБУКИ (1024px - 1365px) ===== */
+@media screen and (max-width: 1365px) {
+    .nav-content {
+        gap: 35px;
+    }
+
+    .nav-content a {
+        font-size: 13px;
+    }
+}
+
+/* ===== ПЛАНШЕТЫ (768px - 1023px) ===== */
+@media screen and (max-width: 1023px) {
+    .navbar {
+        margin-top: 64px; /* Подстраиваем под высоту хедера */
+    }
+
+    .nav-content {
+        height: 40px;
+        gap: 25px;
+        overflow-x: auto; /* Горизонтальный скролл */
+        overflow-y: hidden;
+        padding: 0 10px;
+        scrollbar-width: thin; /* Тонкий скроллбар для Firefox */
+        -webkit-overflow-scrolling: touch; /* Плавный скролл на iOS */
+        flex-wrap: nowrap; /* Запрещаем перенос */
+    }
+
+    /* Стилизация скроллбара (для Chrome, Safari, Edge) */
+    .nav-content::-webkit-scrollbar {
+        height: 3px;
+    }
+
+    .nav-content::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-content::-webkit-scrollbar-thumb {
+        background: #57ff1d;
+        border-radius: 10px;
+    }
+
+    .nav-content a {
+        font-size: 13px;
+        flex-shrink: 0; /* Запрещаем сжатие ссылок */
+    }
+}
+
+/* ===== ТЕЛЕФОНЫ (481px - 767px) ===== */
+@media screen and (max-width: 767px) {
+    .navbar {
+        margin-top: 58px; /* Подстраиваем под высоту хедера */
+        background: transparent; /* Убираем фон, чтобы не мешал */
+        display: none;
+    }
+
+    .nav-content {
+        height: auto;
+        flex-direction: column; /* Вертикальное меню */
+        align-items: stretch;
+        gap: 0;
+        padding: 0;
+        overflow: visible;
+        background: #2d2e38;
+        border-radius: 0 0 10px 10px;
+        padding: 10px 0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-content a {
+        font-size: 16px;
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        white-space: normal; /* Разрешаем перенос */
+        transition: 0.2s;
+    }
+
+    .nav-content a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-content a:hover {
+        background: rgba(87, 255, 29, 0.1);
+        color: #57ff1d;
+    }
+
+    /* Скрываем скроллбар, так как он не нужен */
+    .nav-content::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* ===== МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 480px) ===== */
+@media screen and (max-width: 480px) {
+    .navbar {
+        margin-top: 52px;
+        display: none;
+    }
+
+    .nav-content {
+        padding: 8px 0;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .nav-content a {
+        font-size: 15px;
+        padding: 10px 16px;
+    }
+}
+
+/* ===== ОЧЕНЬ МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 360px) ===== */
+@media screen and (max-width: 360px) {
+    .navbar {
+        margin-top: 48px;
+        display: none;
+    }
+
+    .nav-content {
+        padding: 6px 0;
+    }
+
+    .nav-content a {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+}
+
+/* ===== БОЛЬШИЕ ЭКРАНЫ (1920px+) ===== */
+@media screen and (min-width: 1920px) {
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .nav-content {
+        height: 50px;
+        gap: 60px;
+    }
+
+    .nav-content a {
+        font-size: 16px;
+    }
+}
+
+/* ===== СВЕРХШИРОКИЕ ЭКРАНЫ (2560px+) ===== */
+@media screen and (min-width: 2560px) {
+    .container {
+        max-width: 1800px;
+    }
+
+    .nav-content {
+        height: 56px;
+        gap: 80px;
+    }
+
+    .nav-content a {
+        font-size: 18px;
+    }
+}
+
+/* ===== ДЛЯ ПЕЧАТИ ===== */
+@media print {
+    .navbar {
+        display: none;
+    }
+}
+
+/* ===== ТЁМНАЯ ТЕМА ===== */
+@media (prefers-color-scheme: dark) {
+    .navbar {
+        background: #1a1a22;
+    }
+
+    .nav-content {
+        background: #1a1a22;
+    }
+}
+
+/* ===== ДЛЯ СЕНСОРНЫХ УСТРОЙСТВ ===== */
+@media (hover: none) {
+    .nav-content a:hover {
+        color: white; /* Отключаем ховер на сенсорах */
+        background: transparent;
+    }
+
+    .nav-content a:active {
+        opacity: 0.7;
+    }
+}
+
+/* ===== ДЛЯ ПОЛЬЗОВАТЕЛЕЙ С УМЕНЬШЕННОЙ АНИМАЦИЕЙ ===== */
+@media (prefers-reduced-motion: reduce) {
+    .nav-content a {
+        transition: none;
+    }
+}
+
+/* ===== ДОПОЛНИТЕЛЬНО: АКТИВНАЯ ССЫЛКА ===== */
+.nav-content a.active {
+    color: #57ff1d;
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-content a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #57ff1d;
+}
+
+/* Для мобилок убираем подчёркивание */
+@media (max-width: 767px) {
+    .nav-content a.active::after {
+        display: none;
+    }
+
+    .nav-content a.active {
+        background: rgba(87, 255, 29, 0.1);
+    }
 }

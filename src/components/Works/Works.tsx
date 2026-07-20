@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import './Works.css'
 
 const works = [
@@ -11,21 +11,7 @@ const works = [
 ]
 
 function Works() {
-  const [currentSlide, setCurrentSlide] = useState(0)
-
   
-  const nextSlide = () => {
-    if (currentSlide < works.length - 3) {
-      setCurrentSlide(currentSlide + 1)
-    }
-  }
-
-  const prevSlide = () => {
-    if (currentSlide > 0) {
-      setCurrentSlide(currentSlide - 1)
-    }
-  }
-
   return (
     <section className="works">
       <div className="container">
@@ -45,6 +31,9 @@ function Works() {
               ))}
             </div>
           </div>
+
+
+          
 
 
         </div>

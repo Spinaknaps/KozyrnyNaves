@@ -1,8 +1,11 @@
+/* ===================================================== */
+/* ===== БАЗОВЫЕ СТИЛИ (уже есть) ===== */
+/* ===================================================== */
+
 .hero {
     background-image: url('assets/images/nav.jpg');
     background-size: cover;
     background-position: center;
-
     min-height: 890px;
     position: relative;
 }
@@ -10,7 +13,6 @@
 .hero-overlay {
     background: rgba(22, 18, 48, 0.65);
     min-height: 890px;
-
     padding-top: 120px;
 }
 
@@ -20,8 +22,7 @@
     gap: 60px;
 }
 
-/* левая */
-
+/* Левая колонка */
 .hero-left {
     width: 50%;
     color: white;
@@ -54,26 +55,23 @@
 .check {
     width: 60px;
     height: 60px;
-
     border-radius: 50%;
     background: #b9e9be;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     color: white;
     font-size: 34px;
+    flex-shrink: 0; /* Запрещаем сжатие */
 }
 
-/* правая */
-
+/* Правая колонка */
 .hero-right {
     width: 420px;
     color: white;
-
     display: flex;
     flex-direction: column;
+    flex-shrink: 0; /* Запрещаем сжатие */
 }
 
 .hero-right h2 {
@@ -95,35 +93,582 @@
 .hero-right input {
     width: 100%;
     height: 55px;
-
     margin-bottom: 30px;
-
     border: none;
     outline: none;
-
     padding: 0 20px;
     font-size: 18px;
-
     background: white;
+    border-radius: 8px; /* Добавил для красоты */
+    transition: 0.2s;
+}
+
+.hero-right input:focus {
+    box-shadow: 0 0 0 3px rgba(33, 216, 30, 0.5);
 }
 
 .hero-right button {
     width: 100%;
     height: 65px;
-
     border: none;
     border-radius: 40px;
-
     background: #21d81e;
     color: white;
-
     font-size: 24px;
     cursor: pointer;
-    
 
     transition: 0.2s;
+    font-weight: 600;
 }
 
-button:hover {
+.hero-right button:hover {
     transform: translateY(-2px);
+    background: #1abf18;
+    box-shadow: 0 8px 25px rgba(33, 216, 30, 0.4);
+}
+
+.hero-right button:active {
+    transform: scale(0.98);
+}
+
+/* ===================================================== */
+/* ===== АДАПТИВ ===== */
+/* ===================================================== */
+
+/* ===== НОУТБУКИ (1024px - 1365px) ===== */
+@media screen and (max-width: 1365px) {
+    .hero {
+        min-height: 750px;
+    }
+
+    .hero-overlay {
+        min-height: 750px;
+        padding-top: 100px;
+    }
+
+    .hero-content {
+        gap: 40px;
+    }
+
+    .hero-left h1 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
+
+    .hero-benefits {
+        gap: 25px;
+    }
+
+    .check {
+        width: 50px;
+        height: 50px;
+        font-size: 28px;
+    }
+
+    .benefit {
+        gap: 20px;
+    }
+
+    .hero-right {
+        width: 360px;
+    }
+
+    .hero-right h2 {
+        font-size: 34px;
+        margin-bottom: 25px;
+    }
+
+    .hero-form-text {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .hero-right label {
+        font-size: 18px;
+    }
+
+    .hero-right input {
+        height: 48px;
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    .hero-right button {
+        height: 55px;
+        font-size: 20px;
+    }
+}
+
+/* ===== ПЛАНШЕТЫ (768px - 1023px) ===== */
+@media screen and (max-width: 1023px) {
+    .hero {
+        min-height: auto;
+        padding: 0;
+        
+    }
+
+    .hero-overlay {
+        min-height: auto;
+        padding-top: 90px;
+        padding-bottom: 40px;
+    }
+
+    .hero-content {
+        flex-direction: column; /* Ставим в колонку */
+        gap: 50px;
+    }
+
+    /* Левая колонка — полная ширина */
+    .hero-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-left h1 {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .hero-benefits {
+        align-items: center;
+        gap: 20px;
+    }
+
+    .benefit {
+        gap: 18px;
+    }
+
+    .check {
+        width: 45px;
+        height: 45px;
+        font-size: 24px;
+    }
+
+    /* Правая колонка — полная ширина */
+    .hero-right {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .hero-right h2 {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .hero-form-text {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .hero-right label {
+        font-size: 17px;
+    }
+
+    .hero-right input {
+        height: 45px;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .hero-right button {
+        height: 50px;
+        font-size: 18px;
+    }
+}
+
+/* ===== ТЕЛЕФОНЫ (481px - 767px) ===== */
+@media screen and (max-width: 767px) {
+    .hero-overlay {
+        padding-top: 78px;
+        padding-bottom: 30px;
+        margin-bottom: -40px;
+    }
+
+    .hero-content {
+        gap: 40px;
+    }
+
+    .hero-left h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        margin-bottom: 25px;
+        line-height: 1.5;
+    }
+
+    .hero-benefits {
+        gap: 15px;
+    }
+
+    .benefit {
+        gap: 15px;
+    }
+
+    .check {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    /* Текст преимуществ */
+    .benefit span {
+        font-size: 15px;
+    }
+
+    .hero-right {
+        max-width: 400px;
+    }
+
+    .hero-right h2 {
+        font-size: 26px;
+    }
+
+    .hero-form-text {
+        font-size: 16px;
+    }
+
+    .hero-right label {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .hero-right input {
+        height: 42px;
+        font-size: 14px;
+        padding: 0 15px;
+        margin-bottom: 18px;
+    }
+
+    .hero-right button {
+        height: 48px;
+        font-size: 17px;
+        border-radius: 30px;
+    }
+}
+
+/* ===== МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 480px) ===== */
+@media screen and (max-width: 480px) {
+    .hero-overlay {
+        padding-top: 72px;
+        padding-bottom: 25px;
+        margin-bottom: -40px;
+    }
+
+    .hero-content {
+        gap: 30px;
+    }
+
+    .hero-left h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .hero-benefits {
+        gap: 12px;
+    }
+
+    .benefit {
+        gap: 12px;
+    }
+
+    .check {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .benefit span {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .hero-right {
+        max-width: 100%;
+    }
+
+    .hero-right h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .hero-form-text {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .hero-right label {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .hero-right input {
+        height: 38px;
+        font-size: 13px;
+        padding: 0 12px;
+        margin-bottom: 15px;
+        border-radius: 6px;
+    }
+
+    .hero-right button {
+        height: 44px;
+        font-size: 15px;
+        border-radius: 25px;
+    }
+
+    .hero-right button:hover {
+        transform: none; /* Отключаем ховер на телефонах */
+    }
+}
+
+/* ===== ОЧЕНЬ МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 360px) ===== 68*/
+@media screen and (max-width: 360px) {
+    .hero-overlay {
+        padding-top: 30px; 
+        padding-bottom: 30px;
+        margin-bottom: -40px;
+    }
+
+    .hero-content {
+        gap: 25px;
+    }
+
+    .hero-left h1 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+        font-size: 13px;
+        margin-bottom: 18px;
+    }
+
+    .hero-benefits {
+        gap: 10px;
+    }
+
+    .benefit {
+        gap: 10px;
+    }
+
+    .check {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    .benefit span {
+        font-size: 13px;
+    }
+
+    .hero-right h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .hero-form-text {
+        font-size: 13px;
+        margin-bottom: 18px;
+    }
+
+    .hero-right label {
+        font-size: 13px;
+    }
+
+    .hero-right input {
+        height: 35px;
+        font-size: 12px;
+        padding: 0 10px;
+        margin-bottom: 12px;
+    }
+
+    .hero-right button {
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+/* ===== БОЛЬШИЕ ЭКРАНЫ (1920px+) ===== */
+@media screen and (min-width: 1920px) {
+    .hero {
+        min-height: 1000px;
+    }
+
+    .hero-overlay {
+        min-height: 1000px;
+        padding-top: 150px;
+    }
+
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .hero-content {
+        gap: 80px;
+    }
+
+    .hero-left h1 {
+        font-size: 56px;
+        margin-bottom: 50px;
+    }
+
+    .hero-subtitle {
+        font-size: 28px;
+        margin-bottom: 60px;
+    }
+
+    .hero-benefits {
+        gap: 40px;
+    }
+
+    .check {
+        width: 70px;
+        height: 70px;
+        font-size: 40px;
+    }
+
+    .benefit span {
+        font-size: 22px;
+    }
+
+    .hero-right {
+        width: 480px;
+    }
+
+    .hero-right h2 {
+        font-size: 44px;
+        margin-bottom: 35px;
+    }
+
+    .hero-form-text {
+        font-size: 26px;
+        margin-bottom: 40px;
+    }
+
+    .hero-right label {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .hero-right input {
+        height: 60px;
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
+
+    .hero-right button {
+        height: 70px;
+        font-size: 26px;
+    }
+}
+
+/* ===== ДЛЯ ПЕЧАТИ ===== */
+@media print {
+    .hero {
+        min-height: auto;
+        background: #f5f5f5;
+    }
+
+    .hero-overlay {
+        background: white;
+        min-height: auto;
+        padding: 40px 0;
+    }
+
+    .hero-left h1,
+    .hero-subtitle,
+    .hero-right h2,
+    .hero-form-text,
+    .hero-right label,
+    .benefit span {
+        color: black !important;
+    }
+
+    .hero-right button {
+        display: none;
+    }
+
+    .check {
+        background: #ccc;
+        color: black;
+    }
+}
+
+/* ===== ТЁМНАЯ ТЕМА ===== */
+@media (prefers-color-scheme: dark) {
+    .hero-overlay {
+        background: rgba(10, 8, 28, 0.75);
+    }
+
+    .hero-right input {
+        background: #2a2a35;
+        color: white;
+    }
+
+    .hero-right input::placeholder {
+        color: #888;
+    }
+
+    .hero-right input:focus {
+        box-shadow: 0 0 0 3px rgba(33, 216, 30, 0.3);
+    }
+}
+
+/* ===== ДЛЯ СЕНСОРНЫХ УСТРОЙСТВ ===== */
+@media (hover: none) {
+    .hero-right button:hover {
+        transform: none;
+        background: #21d81e;
+        box-shadow: none;
+    }
+
+    .hero-right button:active {
+        transform: scale(0.95);
+    }
+}
+
+/* ===== ДЛЯ ПОЛЬЗОВАТЕЛЕЙ С УМЕНЬШЕННОЙ АНИМАЦИЕЙ ===== */
+@media (prefers-reduced-motion: reduce) {
+    .hero-right button {
+        transition: none;
+    }
+}
+
+/* ===== ДЛЯ ВЫСОКОГО КОНТРАСТА ===== */
+@media (prefers-contrast: high) {
+    .hero-overlay {
+        background: rgba(0, 0, 0, 0.85);
+    }
+
+    .hero-right input {
+        border: 2px solid white;
+    }
+
+    .hero-right button {
+        background: #00cc00;
+        border: 2px solid white;
+    }
+
 }

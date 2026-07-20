@@ -19,11 +19,13 @@ export default function Footer() {
 
                     <div className="footer-center">
                         <a href="tel:+7879405804860">
-                            +7(912)025-42-62
+
+                            +7(952)408-98-77
                         </a>
 
                         <a href="mailto:ghsdkjghs@mail.ru">
-                            artem.pochta@mail.ru
+                            manky_seven@mail.ru
+
                         </a>
                     </div>
 
@@ -39,7 +41,9 @@ export default function Footer() {
                                 />
                             </a>
 
-                            <a href="https://t.me/spinaknaps">
+
+                            <a href="https://t.me/artemmcarrow">
+
                                 <img
                                     src="assets/icons/tg.svg"
                                     alt="Telegram"
@@ -49,7 +53,7 @@ export default function Footer() {
                             <a href="https://max.ru/u/f9LHodD0cOK2_Pz73E3Bcn2SjnHsBUE-visFwuH4xgxAtp_ud3QcE_zwEtM">
                                 <img
                                     src="assets/icons/max.svg"
-                                    alt="Telegram"
+                                    alt="max"
                                 />
                             </a>
 

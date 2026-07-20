@@ -1,3 +1,7 @@
+/* ===================================================== */
+/* ===== БАЗОВЫЕ СТИЛИ (уже есть) ===== */
+/* ===================================================== */
+
 .works {
     height: 500px;
     background: #341f28;
@@ -13,16 +17,14 @@
     margin-bottom: 45px;
 }
 
-/* зона слайдера */
-
+/* Зона слайдера */
 .works-slider {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-/* трек */
-
+/* Трек */
 .slider-window {
     width: 100%;
     overflow: hidden;
@@ -32,7 +34,6 @@
     display: flex;
     gap: 30px;
     width: max-content;
-
     animation: scrollWorks 30s linear infinite;
 }
 
@@ -52,26 +53,33 @@
     object-fit: cover;
 }
 
-/* круглые кнопки */
-
+/* Круглые кнопки */
 .slider-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-
     width: 42px;
     height: 42px;
-
     border: none;
     border-radius: 50%;
-
     background: #4a3340;
     color: white;
-
     cursor: pointer;
     z-index: 5;
-
     font-size: 22px;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-btn:hover {
+    background: #5d4352;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.slider-btn:active {
+    transform: translateY(-50%) scale(0.95);
 }
 
 .left {
@@ -82,15 +90,12 @@
     right: -20px;
 }
 
-/* нижний индикатор */
-
+/* Нижний индикатор */
 .slider-progress {
     width: 260px;
     height: 24px;
-
     background: #dcc6c9;
     border-radius: 30px;
-
     margin: 55px auto 0;
     overflow: hidden;
 }
@@ -99,14 +104,378 @@
     width: 35%;
     height: 100%;
     background: rgba(255,255,255,.3);
+    transition: width 0.5s ease;
 }
 
 @keyframes scrollWorks {
     from {
         transform: translateX(0);
     }
-
     to {
         transform: translateX(calc(-50%));
+    }
+}
+
+/* ===================================================== */
+/* ===== АДАПТИВ ===== */
+/* ===================================================== */
+
+/* ===== НОУТБУКИ (1024px - 1365px) ===== */
+@media screen and (max-width: 1365px) {
+    .works {
+        height: 450px;
+        padding-top: 30px;
+    }
+
+    .works h2 {
+        font-size: 36px;
+        margin-bottom: 35px;
+    }
+
+    .work-card {
+        width: 320px;
+        height: 213px;
+    }
+
+    .works-track {
+        gap: 25px;
+    }
+
+    .slider-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+
+    .slider-progress {
+        width: 220px;
+        height: 20px;
+        margin-top: 45px;
+    }
+}
+
+/* ===== ПЛАНШЕТЫ (768px - 1023px) ===== */
+@media screen and (max-width: 1023px) {
+    .works {
+        height: 400px;
+        padding-top: 25px;
+    }
+
+    .works h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .work-card {
+        width: 260px;
+        height: 173px;
+    }
+
+    .works-track {
+        gap: 20px;
+    }
+
+    .slider-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+    }
+
+    .left {
+        left: 5px;
+    }
+
+    .right {
+        right: 5px;
+    }
+
+    .slider-progress {
+        width: 180px;
+        height: 18px;
+        margin-top: 35px;
+    }
+
+    .slider-progress-fill {
+        width: 30%;
+    }
+}
+
+/* ===== ТЕЛЕФОНЫ (481px - 767px) ===== */
+@media screen and (max-width: 767px) {
+    .works {
+        height: 300px;
+        padding-top: 20px;
+        margin-top: 40px;
+    }
+
+    .works h2 {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+
+    .work-card {
+        width: 200px;
+        height: 133px;
+    }
+
+    .works-track {
+        gap: 15px;
+    }
+
+    .slider-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .slider-btn:hover {
+        transform: translateY(-50%) scale(1);
+    }
+
+    .left {
+        left: 2px;
+    }
+
+    .right {
+        right: 2px;
+    }
+
+    .slider-progress {
+        width: 150px;
+        height: 16px;
+        margin-top: 30px;
+        border-radius: 20px;
+    }
+
+    .slider-progress-fill {
+        width: 25%;
+        height: 100%;
+    }
+}
+
+/* ===== МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 480px) ===== */
+@media screen and (max-width: 480px) {
+    .works {
+        height: 300px;
+        padding-top: 15px;
+    }
+
+    .works h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .work-card {
+        width: 160px;
+        height: 107px;
+    }
+
+    .works-track {
+        gap: 12px;
+    }
+
+    .slider-btn {
+        width: 26px;
+        height: 26px;
+        font-size: 12px;
+        background: rgba(74, 51, 64, 0.85);
+    }
+
+    .slider-btn:active {
+        transform: translateY(-50%) scale(0.9);
+    }
+
+    .left {
+        left: 2px;
+    }
+
+    .right {
+        right: 2px;
+    }
+
+    .slider-progress {
+        width: 120px;
+        height: 14px;
+        margin-top: 25px;
+        border-radius: 15px;
+    }
+
+    .slider-progress-fill {
+        width: 20%;
+    }
+}
+
+/* ===== ОЧЕНЬ МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 360px) ===== */
+@media screen and (max-width: 360px) {
+    .works {
+        height: 300px;
+        padding-top: 12px;
+    }
+
+    .works h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .work-card {
+        width: 130px;
+        height: 87px;
+    }
+
+    .works-track {
+        gap: 10px;
+    }
+
+    .slider-btn {
+        width: 22px;
+        height: 22px;
+        font-size: 10px;
+    }
+
+    .slider-progress {
+        width: 100px;
+        height: 12px;
+        margin-top: 20px;
+    }
+
+    .slider-progress-fill {
+        width: 15%;
+    }
+}
+
+/* ===== БОЛЬШИЕ ЭКРАНЫ (1920px+) ===== */
+@media screen and (min-width: 1920px) {
+    .works {
+        height: 600px;
+        padding-top: 50px;
+    }
+
+    .works h2 {
+        font-size: 52px;
+        margin-bottom: 55px;
+    }
+
+    .work-card {
+        width: 460px;
+        height: 307px;
+    }
+
+    .works-track {
+        gap: 40px;
+    }
+
+    .slider-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 26px;
+    }
+
+    .slider-progress {
+        width: 320px;
+        height: 28px;
+        margin-top: 65px;
+    }
+
+    .slider-progress-fill {
+        width: 35%;
+    }
+}
+
+/* ===== ДЛЯ ПЕЧАТИ ===== */
+@media print {
+    .works {
+        height: auto;
+        background: white;
+        padding: 20px 0;
+    }
+
+    .works h2 {
+        color: black;
+    }
+
+    .slider-btn,
+    .slider-progress {
+        display: none;
+    }
+
+    .works-track {
+        animation: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .work-card {
+        width: 200px;
+        height: 133px;
+    }
+
+    .work-card img {
+        border: 1px solid #ddd;
+    }
+}
+
+/* ===== ТЁМНАЯ ТЕМА ===== */
+@media (prefers-color-scheme: dark) {
+    .works {
+        background: #1a1420;
+    }
+
+    .slider-btn {
+        background: #2a1f28;
+    }
+
+    .slider-btn:hover {
+        background: #3a2f38;
+    }
+
+    .slider-progress {
+        background: #4a3f42;
+    }
+
+    .slider-progress-fill {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* ===== ДЛЯ СЕНСОРНЫХ УСТРОЙСТВ ===== */
+@media (hover: none) {
+    .slider-btn:hover {
+        transform: translateY(-50%) scale(1);
+    }
+
+    .works-track:hover {
+        animation-play-state: running; /* Не останавливаем на сенсорах */
+    }
+}
+
+/* ===== ДЛЯ ПОЛЬЗОВАТЕЛЕЙ С УМЕНЬШЕННОЙ АНИМАЦИЕЙ ===== */
+@media (prefers-reduced-motion: reduce) {
+    .works-track {
+        animation: none;
+    }
+
+    .slider-btn {
+        transition: none;
+    }
+
+    .slider-progress-fill {
+        transition: none;
+    }
+}
+
+/* ===== ДЛЯ ВЫСОКОГО КОНТРАСТА ===== */
+@media (prefers-contrast: high) {
+    .slider-btn {
+        background: #000;
+        border: 2px solid white;
+    }
+
+    .slider-progress {
+        background: #666;
+    }
+
+    .slider-progress-fill {
+        background: #fff;
     }
 }

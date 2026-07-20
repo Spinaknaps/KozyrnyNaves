@@ -1,0 +1,233 @@
+.calculator-section {
+  padding: 100px 20px;
+  background: #f4f6f3;
+}
+
+.calculator-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.calculator-heading {
+  max-width: 760px;
+  margin-bottom: 48px;
+}
+
+.calculator-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #478b47;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.calculator-heading h1 {
+  margin: 0 0 18px;
+  color: #20262c;
+  font-size: clamp(34px, 5vw, 54px);
+  line-height: 1.08;
+}
+
+.calculator-heading p {
+  margin: 0;
+  color: #667069;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.calculator-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.8fr);
+  gap: 32px;
+  align-items: stretch;
+}
+
+.calculator-form,
+.calculator-result {
+  padding: 38px;
+  border-radius: 24px;
+}
+
+.calculator-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgb(32 38 44 / 8%);
+}
+
+.calculator-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calculator-field label {
+  color: #303730;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.calculator-field input,
+.calculator-field select {
+  width: 100%;
+  height: 58px;
+  padding: 0 16px;
+  border: 1px solid #d9dfd9;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #20262c;
+  font: inherit;
+  font-size: 17px;
+  box-sizing: border-box;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.calculator-field input:focus,
+.calculator-field select:focus {
+  border-color: #478b47;
+  box-shadow: 0 0 0 4px rgb(71 139 71 / 12%);
+}
+
+.calculator-checkbox {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px;
+  border: 1px solid #d9dfd9;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.calculator-checkbox input {
+  width: 20px;
+  height: 20px;
+  accent-color: #478b47;
+}
+
+.calculator-checkbox span {
+  color: #303730;
+  font-weight: 600;
+}
+
+.calculator-note {
+  grid-column: 1 / -1;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: #f4f6f3;
+  color: #667069;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.calculator-result {
+  display: flex;
+  flex-direction: column;
+  background: #20262c;
+  color: #ffffff;
+}
+
+.calculator-result-label {
+  margin-bottom: 12px;
+  color: #aeb8af;
+  font-size: 15px;
+}
+
+.calculator-total {
+  margin-bottom: 14px;
+  font-size: clamp(38px, 5vw, 56px);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.calculator-result-description {
+  margin: 0 0 28px;
+  color: #b8c0ba;
+  line-height: 1.5;
+}
+
+.calculator-result-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  border-top: 1px solid rgb(255 255 255 / 12%);
+}
+
+.calculator-result-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgb(255 255 255 / 12%);
+}
+
+.calculator-result-row span {
+  color: #b8c0ba;
+}
+
+.calculator-result-row strong {
+  white-space: nowrap;
+}
+
+.calculator-button {
+  width: 100%;
+  min-height: 58px;
+  margin-top: auto;
+  padding: 14px 24px;
+  border: 0;
+  border-radius: 12px;
+  background: #56a452;
+  color: #ffffff;
+  font: inherit;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.calculator-button:hover {
+  background: #478b47;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 850px) {
+  .calculator-section {
+    padding: 70px 16px;
+  }
+
+  .calculator-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .calculator-form,
+  .calculator-result {
+    padding: 24px;
+    border-radius: 18px;
+  }
+
+  .calculator-form {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-checkbox,
+  .calculator-note {
+    grid-column: auto;
+  }
+
+  .calculator-result-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+}

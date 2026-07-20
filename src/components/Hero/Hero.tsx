@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Hero.css'
 
 function Hero() {
@@ -27,7 +28,7 @@ function Hero() {
 
               <div className="benefit">
                 <div className="check">✓</div>
-                <p>Монтаж за 3–5 дней</p>
+                <p>Монтаж за 6–10 дней</p>
               </div>
 
               <div className="benefit">
@@ -42,27 +43,20 @@ function Hero() {
 
           <div className="hero-right">
 
-            <h2>Рассчитать стоимость</h2>
+            <h2>Сколько стоит ваш идеальный навес?</h2>
 
             <p className="hero-form-text">
-              Оставьте контакты — подготовим расчет и подскажем
-              оптимальную комплектацию навеса.
+              Узнайте точную стоимость вашего навеса за 30 секунд. 
+              Без звонков, без менеджеров, без скрытых платежей. 
+              Просто выберите параметры — и получите цену прямо сейчас.
             </p>
 
-            <label>Ваше имя</label>
-            <input
-              type="text"
-              placeholder=""
-            />
-
-            <label>Ваш телефон</label>
-            <input
-              type="tel"
-              placeholder=""
-            />
+            
 
             <button>
-              Получить расчет
+              <Link to="/calculator" className="hero-button">
+                Попробовать калькулятор
+              </Link> 
             </button>
 
           </div>
